@@ -6,6 +6,6 @@ class Problem < ApplicationRecord
     has_many :choices, foreign_key: 'questions_id', dependent: :destroy
     has_one :exam, foreign_key: 'questions_id', dependent: :destroy # 1対1の関連付け
   
-    validates :questions, presence: true
+    validates :questions, presence: true, length: { maximum: 200 }
   end
   
