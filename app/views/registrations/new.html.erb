@@ -1,0 +1,40 @@
+<div style="width: 400px; margin: 0 auto; text-align: center; font-family: Arial, sans-serif;">
+  <div>
+    <h1>ロゴ</h1>
+  </div>
+  <h2>新規登録画面</h2>
+  <form action="/registrations/create" method="post">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+    <div style="margin-bottom: 10px;">
+      <label for="name">氏名</label><br>
+      <input type="text" id="name" name="name" placeholder="YamadaTaro" style="width: 100%; padding: 5px;" />
+    </div>
+
+    <div style="margin-bottom: 10px;">
+      <label for="department">学科名</label><br>
+      <input type="text" id="department" name="department" placeholder="IT" style="width: 100%; padding: 5px;" />
+    </div>
+
+    <div style="margin-bottom: 10px;">
+      <label for="student_id">ID/学籍番号</label><br>
+      <input type="text" id="student_id" name="student_id" placeholder="JR2099" style="width: 100%; padding: 5px;" />
+    </div>
+
+    <div style="margin-bottom: 10px;">
+      <label for="password">パスワード</label><br>
+      <input type="password" id="password" name="password" placeholder="半角数字で8文字から16文字まで" style="width: 100%; padding: 5px;" />
+    </div>
+
+    <div style="margin-bottom: 10px;">
+      <label for="password_confirmation">パスワード（確認）</label><br>
+      <input type="password" id="password_confirmation" name="password_confirmation" style="width: 100%; padding: 5px;" />
+    </div>
+
+    <div>
+      <button type="submit" style="width: 100%; padding: 10px; background-color: #ADD8E6; border: none; font-size: 16px;">登録</button>
+    </div>
+  </form>
+</div>
+
+# 作成
