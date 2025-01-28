@@ -13,6 +13,8 @@
 ActiveRecord::Schema.define(version: 2025_01_17_123460) do
 
   create_table "answers", force: :cascade do |t|
+    t.string "answer", null: false
+    t.string "commentary", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -36,6 +38,18 @@ ActiveRecord::Schema.define(version: 2025_01_17_123460) do
     t.string "qualifications", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "exams", force: :cascade do |t|
+    t.integer "respondent_id", null: false
+    t.integer "questions_id", null: false
+    t.integer "questions_num", null: false
+    t.integer "answer_num", null: false
+    t.string "user_answer"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["questions_id"], name: "index_exams_on_questions_id"
+    t.index ["respondent_id"], name: "index_exams_on_respondent_id"
   end
 
   create_table "problems", force: :cascade do |t|
@@ -62,9 +76,11 @@ ActiveRecord::Schema.define(version: 2025_01_17_123460) do
   end
 
   add_foreign_key "choices", "problems", column: "questions_id"
+  add_foreign_key "exams", "problems", column: "questions_id"
+  add_foreign_key "exams", "users", column: "respondent_id"
   add_foreign_key "problems", "answers"
   add_foreign_key "problems", "exam_types", column: "qualifications_id"
   add_foreign_key "problems", "problems", column: "questions_id"
   add_foreign_key "problems", "users", column: "author_id"
-  add_foreign_key "users", "departments"
+  add_foreign_key "users", "department"
 end

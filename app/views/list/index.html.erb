@@ -1,0 +1,36 @@
+<h1>試験名</h1>
+<div class="container">
+  <div class="exam-select">
+    <label for="pet-select">試験一覧</label>
+    <select name="pets" id="pet-select">
+      <option value="">ああああ</option>
+      <option value="dog">Dog</option>
+      <option value="cat">Cat</option>
+      <option value="hamster">Hamster</option>
+      <option value="parrot">Parrot</option>
+      <option value="spider">Spider</option>
+      <option value="goldfish">Goldfish</option>
+    </select>
+  </div>
+
+  <div class="exam-header">
+    <%= button_to '問題登録',new_editing_path, class: 'btn-register' %>
+  </div>
+
+  <div class="exam-list">
+    <% 5.times do %> <!-- サンプルとして5つのアイテムを表示 -->
+  
+  <%= link_to play_test_path, class: 'question-item' do %>
+  <div class="question-info">
+    <span>問題名</span>
+    <span>学生番号 / 作成日</span>
+  </div>
+  <div class="buttons">
+  <%= button_to '編集',edit_editing_path, class: 'btn-edit' %>
+  <%= button_to '削除',index_list_path,method: :get, class: 'btn-delete' %>
+  </div>
+<% end %>
+
+    <% end %>
+  </div>
+</div>

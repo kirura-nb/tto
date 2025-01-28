@@ -1,0 +1,23 @@
+<div class="container">
+    <header>
+        <button class="btn-back">戻る</button>
+        <span class="page-number"><%= @current_page %>/<%= @total_pages %></span>
+       
+        <span class="result"><%= @result %></span>
+        <button class="btn-next">次へ</button>
+    </header>
+    
+    <main>
+        <div class="question-box">
+            <p class="question-title">問題</p>
+            <textarea class="question-content" readonly>
+<%= @question_content %>
+            </textarea>
+        </div>
+
+        <div class="answer-box">
+            <label for="answer">回答</label>
+            <input type="text" id="answer" class="answer-input" value="<%= @user_answer %>">
+        </div>
+    </main>
+</div>

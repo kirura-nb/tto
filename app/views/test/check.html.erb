@@ -1,0 +1,9 @@
+  <span class="score">点数: <%= @score %></span>
+
+<%= render "form" %>
+
+ <div class="container">
+ <p class="correct-answer">正解：<%= @correct_answer %></p>
+ <div>
+ <%= link_to '一覧', index_list_path %>
+<%= link_to 'テスト', play_test_path %>
