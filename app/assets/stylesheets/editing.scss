@@ -1,0 +1,115 @@
+// Place all the styles related to the editing controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    }
+
+    .container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    }
+
+    label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    }
+
+    textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    margin-bottom: 20px;
+    }
+
+    .choices-section {
+    margin-bottom: 20px;
+    }
+
+    .choices {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+    }
+
+    .choice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    span {
+        width: 20px;
+        text-align: center;
+    }
+
+    input {
+        flex: 1;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    }
+
+    button {
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    }
+    .delete-btn {
+        background-color: #f9f9f9;
+        color: #f08080;
+        border: 1px solid #f08080;
+    }
+
+    .correct-btn {
+        background-color: #f9f9f9;
+        color: #4682b4;
+    }
+
+    .add-btn {
+        display: block;
+        margin: 0 auto 20px;
+        background-color: #d9e8fb;
+        border: 1px solid #4682b4;
+        color: #4682b4;
+    }
+
+    .submit-btn {
+        border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+        margin:20px auto;
+        margin-top: 20;
+        display: block;
+        width: 60%;
+        padding: 10px;
+        background-color: #4682b4;
+        color: white;
+        font-size: 16px;
+        border: none;
+
+        :hover {
+        background-color: #315f87;
+        }
+    }

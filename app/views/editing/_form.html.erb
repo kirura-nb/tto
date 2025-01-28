@@ -1,0 +1,39 @@
+<body>
+<div class="container">
+    <h1>試験名</h1>
+
+    <div class="question-section">
+    <%= label_tag :question_text, "問題文" %>
+    <%= text_area_tag :question_text, nil, rows: 4, id: "question-text" %>
+    </div>
+
+    <div class="choices-section">
+    <%= label_tag :choices, "選択肢" %>
+    <div class="choices">
+        <div class="choice">
+        <span>1</span>
+        <%= text_field_tag :choice_1, nil %>
+        <%= button_tag "×", class: "delete-btn" %>
+        </div>
+        <div class="choice">
+        <span>2</span>
+        <%= text_field_tag :choice_2, nil %>
+        <%= button_tag "×", class: "delete-btn" %>
+        </div>
+        <div class="choice">
+        <span>3</span>
+        <%= text_field_tag :choice_3, nil %>
+        <%= button_tag "○", class: "delete-btn correct-btn" %>
+        </div>
+    </div>
+    <%= button_tag "＋", class: "add-btn" %>
+    </div>
+
+    <div class="explanation-section">
+    <%= label_tag :explanation, "解説" %>
+    <%= text_area_tag :explanation, nil, rows: 4, id: "explanation" %>
+    </div>
+
+
+</div>
+</body>
