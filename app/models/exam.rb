@@ -4,6 +4,6 @@ class Exam < ApplicationRecord
   
     validates :questions_num, presence: true, numericality: { only_integer: true }
     validates :answer_num, presence: true, numericality: { only_integer: true }
-    validates :user_answer, allow_nil: true
+    validates :user_answer, allow_nil: true, length: { maximum: 2 }
 end
   
