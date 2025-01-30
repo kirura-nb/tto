@@ -1,0 +1,133 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+.new_form_box {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.form_box {
+  margin-bottom: 10px;
+}
+.text_box {
+  width: 100%;
+  padding: 5px;
+}
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #ADD8E6;
+  border: none;
+  font-size: 16px;
+}
+
+.login-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 360px;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.login-form {
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input::placeholder {
+  font-size: 12px;
+  color: #999;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #5c91f5;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #4a7ed4;
+}
+
+.links {
+  margin-top: 15px;
+}
+
+.links a {
+  display: block;
+  font-size: 12px;
+  color: #5c91f5;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+form {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button:hover {
+  background-color: #87CEEB;
+}
