@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-<div class="login-container">
-  <div class="logo">
-    <div class="circle">ロゴ</div>
-    <h1>ログイン画面</h1>
-  </div>
-  <%= form_with  class: "login-form", url:create_sessions_path, local: true, method: :post do |f| %>
-    <div class="form-group">
-      <%= f.label :department, "ID/学籍番号" %>
-      <%= f.text_field :department, placeholder: "JR2099", class: "form-control" %>
-    </div>
-    <div class="form-group">
-      <%= f.label :password, "パスワード" %>
-      <%= f.password_field :password, placeholder: "半角数字で8文字から16文字まで", class: "form-control" %>
-=======
 <body>
 <div class="container">
     <div class="logo">
@@ -33,7 +18,6 @@
     <div class="links">
       <%= link_to "新規登録" %>
       <%= link_to "パスワードを忘れた場合" %>
->>>>>>> fc144fdc893cc48c67f13799d28b3c5bc308622b
     </div>
     <%= f.submit "ログイン", class: "login-button" %>
   <% end %>
@@ -41,8 +25,4 @@
     <%= link_to "新規登録", new_registrations_path %>
     <%= link_to "パスワードを忘れた場合" %>
   </div>
-<<<<<<< HEAD
-</div>
-=======
 </body>
->>>>>>> fc144fdc893cc48c67f13799d28b3c5bc308622b
