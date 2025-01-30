@@ -17,7 +17,9 @@
 
         <div class="answer-box">
             <label for="answer">回答</label>
-            <input type="text" id="answer" class="answer-input" value="<%= @user_answer %>">
+          <textarea class="question-content" readonly>
+<%= @question_content %>
+            </textarea>
         </div>
     </main>
 </div>

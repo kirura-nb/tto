@@ -15,16 +15,313 @@
  */
 
 
- form {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+/* 全体 */
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #f9f9f9;
-    border-radius: 8px;
-  }
-  input {
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* testのheader */
+.container header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.container header span {
+    margin:  0 -20% 0 0;
+    font-size: 20px;
+    color: black;
+}
+.container header .btn-back,
+.container header .btn-next {
+    background-color: #4682B4;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*testのMain content */
+.container main {
+    margin-bottom: 20px;
+}
+
+/* Question box */
+.container main .question-box {
+    margin-bottom: 20px;
+}
+
+.container main .question-box .question-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+/* testの問題欄 */
+.container main .question-box .question-content {
+    width: 98%;
+    height: 100px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  button:hover {
-    background-color: #87CEEB;
-  }
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+}
+
+/* Answer box */
+.container main .answer-box {
+    margin-bottom: 10px;
+}
+
+.container main .answer-box label,
+.container main .answer-box p {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+/* testの点数 */
+.score {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    color: red;
+    font-weight: bold
+}
+/* testの正解文字 */
+.correct-answer {
+    color: red;
+    font-weight: bold;
+}
+/* edit,list */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+    }
+textarea {
+    width: 98%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    margin-bottom: 20px;
+}
+/* edit選択欄 */
+.choices-section {
+    margin-bottom: 20px;
+    }
+
+    .choices {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+    }
+
+.choice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    
+    span {
+        width: 20px;
+        text-align: center;
+    }
+
+    input {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+}
+/* editボタン */
+    button {
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+}
+.delete-btn {
+    background-color: #f9f9f9;
+    color: #f08080;
+    border: 1px solid #f08080;
+}
+
+.correct-btn {
+    background-color: #f9f9f9;
+    color: #4682b4;
+    border: 1px solid #4682b4;
+}
+
+.add-btn {
+    display: block;
+    margin: 0 auto 20px;
+    background-color: #d9e8fb;
+    border: 1px solid #4682b4;
+    color: #4682b4;
+}
+/* edit登録、修正ボタン */
+.submit-btn {
+    border-radius: 5px;
+padding: 5px 10px;
+cursor: pointer;
+    margin:20px auto;
+    margin-top: 20;
+    display: block;
+    width: 60%;
+    padding: 10px;
+    background-color: #4682b4;
+    color: white;
+    font-size: 16px;
+    border: none;
+}
+    .submit-btn :hover {
+    background-color: #315f87;
+    }
+/* list */
+select {
+font-size: 0.9rem;
+padding: 2px 5px;
+}
+
+.exam-header {
+position: relative;
+left: 90%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 20px;
+}
+.btn-register {
+    background-color: #4682B4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.exam-list {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+.question-item {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+    .question-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    }
+    .buttons {
+    display: flex;
+    gap: 10px;
+    }
+.btn-edit {
+background-color: #4682B4;
+color: white;
+border: none;
+padding: 5px 10px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 14px;
+}
+
+.btn-delete {
+background-color: #F08080;
+color: white;
+border: none;
+padding: 5px 10px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 14px;
+}
+
+/* ログイン画面 */
+.circle {
+width: 60px;
+height: 60px;
+border: 2px solid #000;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+font-size: 16px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    }
+    
+
+input {
+width: 98%;
+padding: 8px;
+font-size: 14px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+input::placeholder {
+font-size: 12px;
+color: #999;
+}
+
+.login-button {
+width: 100%;
+padding: 10px;
+font-size: 16px;
+color: white;
+background-color: #5c91f5;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.login-button:hover {
+background-color: #4a7ed4;
+}
+
+.links {
+margin-top: 15px;
+}
+
+.links a {
+display: block;
+font-size: 12px;
+color: #5c91f5;
+text-decoration: none;
+margin-bottom: 5px;
+}
+
+.links a:hover {
+text-decoration: underline;
+}
