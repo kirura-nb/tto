@@ -1,40 +1,34 @@
-<div style="width: 400px; margin: 0 auto; text-align: center; font-family: Arial, sans-serif;">
+<div class="new_form_box">
   <div>
     <h1>ロゴ</h1>
   </div>
   <h2>新規登録画面</h2>
-  <form action="/registrations/create" method="post">
-    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-
-    <div style="margin-bottom: 10px;">
-      <label for="name">氏名</label><br>
-      <input type="text" id="name" name="name" placeholder="YamadaTaro" style="width: 100%; padding: 5px;" />
+  <%= form_with model: @user_new, url:registrations_path, local: true, method: :post do |f| %>
+    <div class="form_box">
+      <%= f.label :name, "氏名" %>
+      <%= f.text_field :name, placeholder: "YamadaTaro", class: "text_box" %>
     </div>
 
-    <div style="margin-bottom: 10px;">
-      <label for="department">学科名</label><br>
-      <input type="text" id="department" name="department" placeholder="IT" style="width: 100%; padding: 5px;" />
+    <div class="form_box">
+      <%= f.label :department, "学科名" %>
+      <%= f.select :id, @departments, {prompt: "選択してください"}, class: "text_box", id: "department_id" %>
     </div>
 
-    <div style="margin-bottom: 10px;">
-      <label for="student_id">ID/学籍番号</label><br>
-      <input type="text" id="student_id" name="student_id" placeholder="JR2099" style="width: 100%; padding: 5px;" />
+    <div class="form_box">
+      <%= f.label :student_id, "ID/学籍番号" %>
+      <%= f.text_field :student_id, placeholder: "JR2099", class: "text_box" %>
     </div>
 
-    <div style="margin-bottom: 10px;">
-      <label for="password">パスワード</label><br>
-      <input type="password" id="password" name="password" placeholder="半角数字で8文字から16文字まで" style="width: 100%; padding: 5px;" />
+    <div class="form_box">
+      <%= f.label :password, "パスワード" %>
+      <%= f.password_field :password, placeholder: "半角数字で8文字から16文字まで", class: "text_box" %>
     </div>
 
-    <div style="margin-bottom: 10px;">
-      <label for="password_confirmation">パスワード（確認）</label><br>
-      <input type="password" id="password_confirmation" name="password_confirmation" style="width: 100%; padding: 5px;" />
+    <div class="form_box">
+      <%= f.label :password_confirmation, "パスワード（確認）" %>
+      <%= f.password_field :password_confirmation, class: "text_box" %>
     </div>
 
-    <div>
-      <button type="submit" style="width: 100%; padding: 10px; background-color: #ADD8E6; border: none; font-size: 16px;">登録</button>
-    </div>
-  </form>
+    <%= f.submit "登録", class: "btn" %>
+  <% end %>
 </div>
-
-# 作成
