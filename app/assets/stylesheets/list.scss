@@ -1,102 +1,89 @@
 // Place all the styles related to the list controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    
-  }
+
   
-  h1 {
-    text-align: center;
-    margin: 20px 0;
-  }
+
   
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+  // .container {
+  //   width: 90%;
+  //   max-width: 1200px;
+  //   margin: 0 auto;
+  // }
   
-  label {
-    font-family: sans-serif;
-    font-size: 1rem;
-    padding-right: 10px;
-  }
+  // label {
+  //   font-family: sans-serif;
+  //   font-size: 1rem;
+  //   padding-right: 10px;
+  // }
   
-  select {
-    font-size: 0.9rem;
-    padding: 2px 5px;
-  }
+  // select {
+  //   font-size: 0.9rem;
+  //   padding: 2px 5px;
+  // }
   
-  .exam-header {
-    position: relative;
-    left: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-    .btn-register {
-      background-color: #4682B4;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 14px;
-    }
+  // .exam-header {
+  //   position: relative;
+  //   left: 90%;
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  //   margin-bottom: 20px;
+  // }
+  //   .btn-register {
+  //     background-color: #4682B4;
+  //     color: white;
+  //     border: none;
+  //     padding: 10px 20px;
+  //     border-radius: 5px;
+  //     cursor: pointer;
+  //     font-size: 14px;
+  //   }
   
-  .exam-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-    .question-item {
-      font-weight: bold;
-      color: black;
-      text-decoration: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-      border: 1px solid #ccc;
-      background-color: white;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-      .question-info {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
+  // .exam-list {
+  //   display: flex;
+  //   flex-direction: column;
+  //   gap: 10px;
+  // }
+  //   .question-item {
+  //     font-weight: bold;
+  //     color: black;
+  //     text-decoration: none;
+  //     display: flex;
+  //     justify-content: space-between;
+  //     align-items: center;
+  //     padding: 10px;
+  //     border: 1px solid #ccc;
+  //     background-color: white;
+  //     border-radius: 5px;
+  //     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  //   }
+  //     .question-info {
+  //       display: flex;
+  //       flex-direction: column;
+  //       gap: 5px;
   
-      }
-        span {
-          font-size: 14px;
-        }
+  //     }
+  //     .buttons {
+  //       display: flex;
+  //       gap: 10px;
+  //     }
+  //       .btn-edit {
+  //         background-color: #4682B4;
+  //         color: white;
+  //         border: none;
+  //         padding: 5px 10px;
+  //         border-radius: 5px;
+  //         cursor: pointer;
+  //         font-size: 14px;
+  //       }
   
-      .buttons {
-        display: flex;
-        gap: 10px;
-      }
-        .btn-edit {
-          background-color: #4682B4;
-          color: white;
-          border: none;
-          padding: 5px 10px;
-          border-radius: 5px;
-          cursor: pointer;
-          font-size: 14px;
-        }
-  
-        .btn-delete {
-          background-color: #F08080;
-          color: white;
-          border: none;
-          padding: 5px 10px;
-          border-radius: 5px;
-          cursor: pointer;
-          font-size: 14px;
-        }
+  //       .btn-delete {
+  //         background-color: #F08080;
+  //         color: white;
+  //         border: none;
+  //         padding: 5px 10px;
+  //         border-radius: 5px;
+  //         cursor: pointer;
+  //         font-size: 14px;
+  //       }

@@ -1,101 +1,95 @@
 // Place all the styles related to the test controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-}
+
 
 /* Container styling */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+// .container {
+//     max-width: 800px;
+//     margin: 0 auto;
+//     padding: 20px;
+//     background: #fff;
+//     border-radius: 8px;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+// }
 
 /* Header section */
-.container header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
+// .container header {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin-bottom: 20px;
+// }
 
-.container header span {
-    margin:  0 -20% 0 0;
-    font-size: 20px;
-    color: black;
-}
+// .container header span {
+//     margin:  0 -20% 0 0;
+//     font-size: 20px;
+//     color: black;
+// }
 
 /* Highlighted score text */
-.score {
-    position: absolute;
-    top: 2%;
-    left: 50%;
-    color: red;
-    font-weight: bold
-
-}
+// .score {
+//     position: absolute;
+//     top: 2%;
+//     left: 50%;
+//     color: red;
+//     font-weight: bold
+// }
 
 /* Button styles */
-.container header .btn-back,
-.container header .btn-next {
-    background-color: #4682B4;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
+// .container header .btn-back,
+// .container header .btn-next {
+//     background-color: #4682B4;
+//     color: #fff;
+//     border: none;
+//     padding: 10px 15px;
+//     border-radius: 5px;
+//     cursor: pointer;
+// }
 
 /* Main content */
-.container main {
-    margin-bottom: 20px;
-}
+// .container main {
+//     margin-bottom: 20px;
+// }
 
-/* Question box */
-.container main .question-box {
-    margin-bottom: 20px;
-}
+// /* Question box */
+// .container main .question-box {
+//     margin-bottom: 20px;
+// }
 
-.container main .question-box .question-title {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
+// .container main .question-box .question-title {
+//     font-weight: bold;
+//     margin-bottom: 10px;
+// }
 
-.container main .question-box .question-content {
-    width: 100%;
-    height: 100px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    resize: none;
-}
+// .container main .question-box .question-content {
+//     width: 100%;
+//     height: 100px;
+//     border: 1px solid #ccc;
+//     border-radius: 5px;
+//     padding: 10px;
+//     resize: none;
+// }
 
-/* Answer box */
-.container main .answer-box {
-    margin-bottom: 10px;
-}
+// /* Answer box */
+// .container main .answer-box {
+//     margin-bottom: 10px;
+// }
 
-.container main .answer-box label,
-.container main .answer-box p {
-    font: 1rem 'Fira Sans', sans-serif;
-}
+// .container main .answer-box label,
+// .container main .answer-box p {
+//     font: 1rem 'Fira Sans', sans-serif;
+// }
 
-.container main .answer-box .answer-input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+// .container main .answer-box .answer-input {
+//     width: 100%;
+//     padding: 8px;
+//     border: 1px solid #ccc;
+//     border-radius: 5px;
+// }
 
 /* Correct answer styling */
-.correct-answer {
-    color: red;
-    font-weight: bold;
-}
+// .correct-answer {
+//     color: red;
+//     font-weight: bold;
+// }
