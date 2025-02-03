@@ -1,4 +1,3 @@
-<body>
 <div class="container">
     <div class="logo">
       <div class="circle">ロゴ</div>
@@ -13,16 +12,11 @@
         <%= f.label :password, "パスワード" %>
         <%= f.password_field :password, placeholder: "半角数字で8文字から16文字まで", class: "form-control" %>
       </div>
-      <%= f.submit "ログイン", class: "login-button" %>
-    <% end %>
-    <div class="links">
-      <%= link_to "新規登録" %>
-      <%= link_to "パスワードを忘れた場合" %>
-    </div>
     <%= f.submit "ログイン", class: "login-button" %>
   <% end %>
   <div class="links">
-    <%= link_to "新規登録", new_registrations_path %>
+    <%= link_to "新規登録", new_user_path %>
     <%= link_to "パスワードを忘れた場合" %>
   </div>
-</body>
+  </div>
+

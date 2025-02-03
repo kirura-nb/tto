@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   before_action :logged_in?, only: [:new, :create]
  
   def new
-
+    
   end
 
   def create
@@ -31,5 +31,4 @@ class SessionsController < ApplicationController
           redirect_to memos_path
       end
   end
-  end
-  
+end

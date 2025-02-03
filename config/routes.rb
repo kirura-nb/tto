@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root :to =>'sessions#new'
 
   # 新規登録画面パス
-  resource :registrations, only: [:new, :edit, :create]
+  resource :user, only: [:new, :edit, :create]
 
   # ログインパス
   get 'login',  to: 'sessions#new', as: 'new_sessions'
