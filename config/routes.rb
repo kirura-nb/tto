@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  # root :to =>'list#index'
-  root :to =>'sessions#new'
+  root :to =>'list#index'
+  # root :to =>'sessions#new'
 
   # 新規登録画面パス
   resource :user, only: [:new, :edit, :create]

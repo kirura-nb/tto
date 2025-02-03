@@ -31,4 +31,9 @@ class SessionsController < ApplicationController
           redirect_to memos_path
       end
   end
+<<<<<<< HEAD
 end
+=======
+end
+  
+>>>>>>> 810bd4a866cc63be6b1c933e6507d62a42aa61c0
