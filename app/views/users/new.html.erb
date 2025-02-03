@@ -3,7 +3,7 @@
     <h1>ロゴ</h1>
   </div>
   <h2>新規登録画面</h2>
-  <%= form_with model: @user_new, url:registrations_path, local: true, method: :post do |f| %>
+  <%= form_with model: @user_new, url:user_path, local: true, method: :post do |f| %>
     <div class="form_box">
       <%= f.label :name, "氏名" %>
       <%= f.text_field :name, placeholder: "例）山田太郎", class: "text_box" %>
@@ -11,7 +11,7 @@
 
     <div class="form_box">
       <%= f.label :department, "学科名" %>
-      <%= f.select :id, @departments, {prompt: "選択してください"}, class: "text_box", id: "department_id" %>
+      <%= f.select :department, @departments, {prompt: "選択してください"}, class: "text_box", id: "department_id" %>
     </div>
 
     <div class="form_box">
@@ -20,13 +20,13 @@
     </div>
 
     <div class="form_box">
-      <%= f.label :password, "パスワード" %>
-      <%= f.password_field :password, placeholder: "半角数字:6文字", class: "text_box" %>
+        <%= f.label :password, "パスワード" %>
+        <%= f.password_field :password, placeholder: "半角数字:6文字", class: "text_box" %>
     </div>
 
     <div class="form_box">
-      <%= f.label :password_confirmation, "パスワード（確認）" %>
-      <%= f.password_field :password_confirmation, placeholder: "もう一度、入力をお願いします", class: "text_box" %>
+        <%= f.label :re_password, "パスワード（確認）" %>
+        <%= f.password_field :re_password, placeholder: "もう一度、入力をお願いします", class: "text_box" %>
     </div>
 
     <%= f.submit "登録", class: "btn" %>

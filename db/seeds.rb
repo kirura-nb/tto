@@ -8,3 +8,4 @@ Department.create!(
         { department: "IT学科" }
     ]
 )
+
