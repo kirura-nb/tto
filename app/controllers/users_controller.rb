@@ -9,14 +9,10 @@ class UsersController < ApplicationController
     end
 
     def create
-        user_params
-        user_params[:department] = user_params[:department].to_i
-        user_params[:password] = user_params[:password].to_i
-        user_params[:re_password] = user_params[:re_password].to_i
         @user_new = User.new(user_params)
 
         # パスワードと確認用パスワードが一致するか確認
-        if @user_new.password == @user_new.re_password
+        # if @user_new.password == @user_new.re_password
             if @user_new.save
                 session[:number] = @user_new.number
                 flash[:notice] = "アカウントを作成しました。"
@@ -25,10 +21,10 @@ class UsersController < ApplicationController
                 flash.now[:alert] = "アカウント作成に失敗しました。"
                 render action: "new"
             end
-        else
-            flash.now[:alert] = "パスワードが一致しません。再度、入力をお願いします。"
-            render action: "new"
-        end
+        # else
+        #     flash.now[:alert] = "パスワードが一致しません。再度、入力をお願いします。"
+        #     render action: "new"
+        # end
     end
 
     def update
@@ -47,9 +43,8 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        user_params = params.require(:user).permit(:name, :department, :number, :password, :re_password)
-        # 変換を行う前にパラメータを確認
-        puts "Before conversion: #{user_params["department"]}"
+        
+        user_params = params.permit(:name, :department, :number, :password, :re_password)
         
         # department を整数に変換
         user_params["department"] = user_params["department"].to_i
@@ -58,7 +53,12 @@ class UsersController < ApplicationController
       
         # 変換後のパラメータを確認
         puts "After conversion: #{user_params["department"]}"
-      
-        p user_params
+
+        if user_params[:department] == 6
+            # it = Department.find_by(department: "IT学科")
+            user_params[:department_id] = Department.find_by(department: "IT学科").id
+            protect_from_forgery :except => [:department_id]
+        end
+        user_params.permit(:name, :department_id, :number, :password, :re_password)
       end
 end

@@ -1,5 +1,7 @@
-class ExamType < ApplicationRecord
-    has_many :problems, foreign_key: 'qualifications_id', dependent: :destroy
+# class ExamType < ApplicationRecord
+#     has_many :problems, foreign_key: 'qualifications_id', dependent: :destroy
   
-    validates :qualifications, presence: true, length: { maximum: 20 }
-end  
+#     validates :qualification, presence: true, length: { maximum: 20 }
+# end  
+
+# コマンドで消せない...

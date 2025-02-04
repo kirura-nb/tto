@@ -22,11 +22,11 @@ class ListController < ApplicationController
     private
     
     def current_user
-      # if session[:department]
-      #   @user = User.find(session[:department])
-      # else
-      #   flash[:alert] = "ログインする必要があります。"
-      #   redirect_to new_sessions_path
-      # end
+      if session[:department]
+        @user = User.find(session[:department])
+      else
+        flash[:alert] = "ログインする必要があります。"
+        redirect_to new_sessions_path
+      end
     end
 end
