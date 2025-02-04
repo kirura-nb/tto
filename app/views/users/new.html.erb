@@ -3,7 +3,7 @@
     <h1>ロゴ</h1>
   </div>
   <h2>新規登録画面</h2>
-  <%= form_with model: @user_new, url:user_path, local: true, method: :post do |f| %>
+  <%= form_with url: user_path, url:user_path, local: true, method: :post do |f| %>
     <div class="form_box">
       <%= f.label :name, "氏名" %>
       <%= f.text_field :name, placeholder: "例）山田太郎", class: "text_box" %>

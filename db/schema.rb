@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_01_17_123460) do
+ActiveRecord::Schema.define(version: 2025_02_04_021102) do
 
   create_table "answers", force: :cascade do |t|
     t.string "answer", null: false
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2025_01_17_123460) do
   end
 
   create_table "exam_types", force: :cascade do |t|
-    t.string "qualifications", null: false
+    t.string "qualification", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2025_01_17_123460) do
 
   create_table "problems", force: :cascade do |t|
     t.integer "author_id", null: false
-    t.integer "qualifications_id", null: false
+    t.integer "qualification_id", null: false
     t.string "questions", null: false
     t.integer "answer_id", null: false
     t.integer "questions_id", null: false
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 2025_01_17_123460) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["answer_id"], name: "index_problems_on_answer_id"
     t.index ["author_id"], name: "index_problems_on_author_id"
-    t.index ["qualifications_id"], name: "index_problems_on_qualifications_id"
+    t.index ["qualification_id"], name: "index_problems_on_qualification_id"
     t.index ["questions_id"], name: "index_problems_on_questions_id"
   end
 
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 2025_01_17_123460) do
     t.string "name", null: false
     t.integer "department_id", null: false
     t.integer "password", null: false
+    t.integer "re_password", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["department_id"], name: "index_users_on_department_id"
@@ -79,7 +80,7 @@ ActiveRecord::Schema.define(version: 2025_01_17_123460) do
   add_foreign_key "exams", "problems", column: "questions_id"
   add_foreign_key "exams", "users", column: "respondent_id"
   add_foreign_key "problems", "answers"
-  add_foreign_key "problems", "exam_types", column: "qualifications_id"
+  add_foreign_key "problems", "exam_types", column: "qualification_id"
   add_foreign_key "problems", "problems", column: "questions_id"
   add_foreign_key "problems", "users", column: "author_id"
   add_foreign_key "users", "department"
